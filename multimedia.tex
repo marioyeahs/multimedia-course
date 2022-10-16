@@ -1,0 +1,175 @@
+\documentclass{IEEEtran} 
+
+%%you can call packages here 
+\usepackage[utf8]{inputenc} %utf8 text character encoding
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,nccmath}
+\usepackage{hyperref}
+\hypersetup{colorlinks,linkcolor={blue},citecolor={blue},urlcolor={red}}  
+\usepackage{cleveref} %Para usar crefrange
+\usepackage{algorithm,algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage[font=footnotesize,labelfont=bf]{caption}
+\usepackage[font=footnotesize,labelfont=bf]{subcaption}
+\usepackage{color}
+\usepackage{gensymb}
+\usepackage{dblfloatfix}
+\usepackage{lineno}
+\usepackage{enumitem}
+\usepackage[autostyle]{csquotes}
+
+
+\usepackage{latexsym} 
+
+
+\title{IoE Essay}
+\author{Mario Abraham Gallardo Cervantes} 
+
+
+\begin{document}
+\maketitle
+
+%%\vspace{-13mm}
+\begin{abstract}
+Through the years, technology has advanced in all the fields like medicine, aeronautic and space, music, telecommunications and also entertainment. One thing in common with the develop of devices or technologies from this fields is that the Internet are integrated within them.
+\end{abstract}
+
+\section{Introduction} \label{introduction}
+
+In our daily life we do a lot of things, maybe the first thing you do is prepare a coffee, or toast bread, or maybe make some exercise like running or practicing yoga, but what happen if you wake up late and you cannot toast your bread or  to heat the water for your coffee, you will go out without a breakfast and this is so dangerous for people, now imagine that you can set up your toaster or your coffeepot to every morning at 6am turn on and prepare it for you, it will be incredible, wont it? And also to have a watch that can monitor your breathing, your heart beats, on the night trace the hours you sleep deeper. All this kind of things are possible thanks to Internet of Everything, or maybe thanks to the companies that create the necessity of have their products, because, be honest, you don't know that you need it once you have it.
+
+\begin{figure}[!htbp]
+ \centering
+		\includegraphics[width=8 cm, height=6 cm]{iot1.png} 
+        \caption{Internet of everything}  
+        \label{ioe} 
+        
+\end{figure}  
+%%GRAMMARLY 
+
+\section{Development}
+
+There used to be a time when internet was just looking for funny stuff online, but now, it seems to be that Internet has already taken a big part of our lives, since we wake up, until we fall asleep.
+As tech companies grow, they are fighting to show or to give the users more and more intelligent products, from a simple computer to other computers like robots or normal homestuff that now is connected to the internet, this is what is known as Internet of Things. 
+\subsection{The most common IoT devices}
+\begin{enumerate}
+\item Cellphone
+\item Laptop
+\item TV
+\item Watch
+\item Speaker
+\end{enumerate}
+
+Now, Internet is controlling every single part of our lives, Internet knows everything about us, and by this statement, I mean things from us, for example: health. And just with a simple smartwatch. Smartwatch companies know; when we do exercise, when we don’t, whether we’ve slept well, or not, our sleep schedule, they can monitor hour heart rate; and with that, we can make our own opinion: doctors may help us, but companies know all this stuff about us.
+But this is just the beginning, with IoT, can help humanity to innovate things that many years ago we, as a society wouldn’t think of. For example, women can know follow their fertility state, elders can be helped with their sleep, their families can know if they are okay, we can trace security at home, we can even use IoT wo trace
+honeycombs and bees, etc. But with all these good things bad stuff is also going on.
+
+\subsection{Some things that you never imagine to be IoT}
+\begin{itemize}
+\item Toilet
+\item Clothes
+	\begin{itemize}
+		\item Shirts
+		\item Pants
+	\end{itemize}
+\item Erotic toys
+\end{itemize}
+
+\section{My contributions}
+Personally, I have not developed physically IoE projects yet, I have just do a research for project that won an IBM hackaton in 2015, is a device for care the health of fire-mans, some sensors are integrated, and components like one from Microsoft called HUB, a device with Azure technology, this means that the data collected from sensors are sent to the cloud. 
+
+\clearpage
+\section{Página sin número}
+Dependiendo de la clase que estemos usando, LaTex nos puede añadir el número de página para usarlo:
+\tableofcontents
+\thispagestyle{empty}
+\clearpage
+
+\section{Capítulo 1}
+\label{secuno}
+
+\section{Numeración Romana}
+Es muy común que las primeras hojas de la tésis (por ejemplo la introducción) estén enumeradas con números romanos, y para ellos se añade el comando:
+\pagenumbering(roman)
+
+El formato de la numeración depende del lenguaje que estemos usando, si trabajmos en inglés, con {roman} serán minúsculas, {Roman} será con mayúsculas
+
+Pero, si trabajamos en español, los números romanos serán en mayúsculas con ambos comandos. Aún así si trabajamos en español,, y quieres ponerlos en munúsulas usa:\\
+usepackage[spanish, es-lcroman]{babel}
+
+\section{Comenzar la numeración con otro número}
+hay veces que queremos contar una página extra que no numeramos (por ejmplo la página de dedicatoria y los agradecimientos) por lo que la numeración no debería empezar en 1.
+
+Para hacer esto, justo después de \pagenumbering, hay que añadir \setcounter{page}{x}, donde x es el valor con el que quieres que empiece la numeración.
+
+\section{Regresar a numeración arábiga}
+\pagenumbering{arabic} %numeración arábiga
+\setcounter{page}{1} % comenzar numeración
+
+\section{Insertar una imagen}
+Primero se agrega en el preá,bulo los paquetes 'graphicx' acompañado de 'float' uno es para agregar imágenes y el otro para poder controlar la posición de la imágen
+Ahora ya es posible utilizar el comando 'includegraphics que permite insertar una imagen. La notación de este comando es: 'includegraphics[opciones]{imagen}
+
+\section{Tamaño y angulo de la figura}
+dentro de las opciones que podemos incluir, las cuatro más importantes son:\\
+width: anchura\\
+height: altura\\
+scale: factor de escala\\
+angle: ángulo de rotación\\
+La anchura y la altura con distuintas unidades:\\
+in, cm, mm, pt (1pt = 0.3528 mm)
+
+También es posble definir la anchura de la imagen en relacion directa con la longitud de una línea en del documento: esto se puede hcer mediante el comando '\linewidth'\\
+Por ejemplo:\\
+\includegraphics[width=0.5\linewidth]{imagen}
+Esto insertará la imagen ocupando 0.5 veces la longitud total de una línea
+
+Fracciones
+Para agregar fracciones se usa \frac{numerador}{denominador}
+\begin{math}
+    \frac{1}{2}=\frac{1}{4}+\frac{1}{4}\\
+\end{math}
+
+Aritmetica basica
+\{2x-3=7\}
+\{x=\frac{10}{2}\}
+
+Numeración de ecuaciones
+\begin{equation}
+    ax3+bx2+cx+d=0
+\end{equation}
+
+Paréntesis matemáticos
+\[
+\left(\frac{\frac{2}{3}+\frac{1}{2}}{\frac{1}{2}}\right)=\frac{7}{3}
+\]
+
+Punto de multiplicación
+\[
+\sqrt{2}\cdot\sqrt{2}=\sqrt{6}
+\]
+\[
+\sqrt[3]{x¨(5)}=x\sqrt[3]{x¨(2)}
+\]
+\[
+c=\frac{1}{\sqrt{\epsilon_{0}\mu_{0}}}
+\]
+
+Alfabeto griego
+Dentro de un texto $\alpha$
+
+
+\section{Conclusions} 
+
+Yes, IoT is a helpful tool, but it also opens the doors of privacy. Companies, governments know everything about us, even our personalities, our decisions, who we are friends with, who we aren’t anymore. Is this really the future? Or do we need to make boundaries about this? With all this stuff being created, we need to talk about sustainability. This new industrial revolution will lead us to interconnected cities, yes, but we, as a society, need to enforce the government to invest in sustainability. We are thinking a lot about
+future being “green” but we need to start now.
+
+
+\end{document}
+
+
+
+
+
+
