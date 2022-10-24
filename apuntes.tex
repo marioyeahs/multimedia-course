@@ -1,0 +1,172 @@
+\documentclass{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\usepackage{lscape} %hoja horizontal
+\geometry{a4paper}
+\usepackage[frenchb]{babel}
+
+%\title{Premier document}
+%\author{Un TeXnicien}
+%\date{}
+
+\begin{document}
+
+
+%\maketitle
+\begin{titlepage}
+	\begin{center}
+		
+		\line(1,0){200}\\
+		\huge{\bfseries Reporte Anual}\\
+		\line(1,0){200}\\
+
+
+	\end{center}
+\end{titlepage}
+
+Voici un texte accentué en françaisdfgdfg!\\
+%[]
+[10 mm] % se puede poner en cm, mm y in
+Voici un texte accentué en françaisdfgdfg!\\
+
+\begin{flushright} % texto del lado derecho
+
+	Este texto está del lado derecho
+
+\end{flushright}
+
+\section{Tamaño de papel a utilizar en documentclass}
+ Ancho 	Alto \\
+ letterpaper 210mm 297mm\\
+legalpaper 148mm 210mm\\
+executivepaper 176mm 250mm\\
+a4paper 8.5in 11in\\
+a5paper 8.5in 14in\\
+b5paper 7.25in 10.5in\\
+
+\section{Orientación del papel en documentclass}
+portrait: vertical
+landscape: horizontal
+
+\begin{landscape}
+	Texto en hoja horizontal
+\end{landscape}
+
+\section{Impresión}
+A excepción de la clase book, los demás documentos se imprimen a una sola cara, pero este se puede modificar, se pone en documentclass
+oneside: para una cara
+twoside: para dos caras
+
+creción de cpaitulos o secciones
+\section{Capítulos o secciones}
+no hay necesidad de poner tamaño, letra o num de capitulo
+
+el estilo Fancy tiene seis campos, ters en el encabezado y tres en el pié de página.
+\lhead{}: campo de la izquierda del encabezado
+\chead{}: campo central del encabezado. Quedará centrado
+\rhead{}: campo de la derecha del encabezado. Quedará alineado a la derecha 
+
+\lfoot{}: campo de la izquierda del pie
+\cfoot{}: campo central del pie. Quedará centrado
+\rfoot{}: campo de la derecha del pie. Quedará alineado a la derecha 
+
+Agregando líneas
+El paquete fancyhdr también permite insertar líneas horizontales para separar estos elementos del resto de la página. Podemos definir el grosor de estas líneas mediante los comandos:
+\renewcommand{\headrulewidth}{0.45pt}
+\renewcommand{\footrulewidth}{1pt}
+
+En el encabezado
+\usepackage{fancyhdr} %activamos el paquete
+\pagestyle{fancy} %seleccionando un estilo
+\pagestyle{headings} %agregar el nombre de la seccion y el número en el encabezado
+
+\foot{autor}
+\renewcommand{\headrulewidth}{0.4pt} % grosor de la línea de la cabecera
+\renewcommand{\footrulewidth}{0.4pt} % grosor de la línea del pie
+
+Tarea
+¿Cómo poner una imagen en cabecera y pie de página?
+
+Subtemas y subsubtemas
+\subsection{subseccion}
+\subsubsection{subsubseccion}
+
+Parrafos y sub párrafos
+Por debajo del nivel subsection tambien es posble agregar subparrafos y parrafos. estas unidades aparecen sin número y se declaran mediante los comandos:
+\paragraph{}
+\subparagraph{}
+
+Dividir un libro en partes
+En caso de querer dividir un documento en partes es necesario utilizar las clases 'book' o 'report'
+Estas divisiones pueden introducirse mediante los comandos \part{} y \chapter{}
+
+\part{criptografia}
+	\chapter{cripto clasica}
+	\section{cripto de sustitucion}
+		\subsection{cifrado monoalfabetico}
+		\subsection{cifrado polialfabetico}
+	\section{cripto de transportacion}
+		\subsection{escitalo espartano}
+
+\part{Esteganografía}
+
+	\chapter(este clásica)
+	\section{tinta visible}
+	\section{reduccion fotográfica}
+	\chapter{esteganografia moderna}
+	\section{marcas de agua visibles}
+	\section{marcas de agua ocultas}
+
+
+\section{Cómo hacer una tabla?}
+\begin{table}
+
+F\centering
+\label{tab: DESrobustez}
+\caption{Robustez de algoritmo DES}
+\begin{tabular}{l c r}
+Algoritmo & tipo de cifrado & robustez \\hline
+Vigenere & simétrico & baja \\
+RSA & simétrico & alta \\
+\end{tabular}
+
+\end{table}
+
+\section{Tabal en lugar de cuadro}
+Cuando trbajamaos con el paquete spanish, las tablas son nombradas 'cuadros'; para cambiar el nombre a tablas:\\
+\usepackage[spanish, es-tabla]{babel}
+
+\section{Indice de tablas}
+Elindice de tablas pude crearse con el cmando 0lisoftables. Al igual que en el caso del {indice de figuras es necesario haber definido el t{itulo de las tablas que queremos que aparezca en el índice mediante el comando \caption
+
+%indice de tablas
+\listoftables
+\addcontentsline{toc}{section}{\numberline}{lista de tablas}
+\clearpage
+
+\section{Tarea}
+¿Cómo modificar el ancho de las columnas?
+
+\sectionmovernos desde el índice con un clic}
+Con hidelinks podemos movernos desde el índice a donde se encuentra el capítulo o figura, tabla...
+\usepackage[hidelinks]{hyperref} 
+
+\section{texto con color}
+cuando quremos poner de un color determinado cierta palabra, podemos usar el paquete {xcolor}, que incorpora funciones para definir el colo del texto con \textcolor, usamos el paquete:\\
+\usepackage[usenames, dvipsnames, svgnames]{xcolor}
+
+usenames: permite llanar a los 16 colores básicos por su nombre
+dvipsname da acceso a otros 64 colores extra
+svgnames, añade 150 colores más
+
+Como se dijo en el capitulo \ref{secuno}
+\textcolor{BlueGreen}{texto con color}
+\lipsum
+Tambien podemos definir nuestros propios colores. Para ello se deben usar los sig protocolos:\\
+RGB = mezcla rojo verde y azul, cada uno entre 0 y 255
+rgb=  mezcla de cuan, magenta y amarullo y negro. cada uno con unvalor entre 0 y 1
+gray= escala de grises: entre 0 (negro)  y 1 (BLANCO)
+
+\end{document}
